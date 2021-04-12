@@ -1,4 +1,4 @@
-package lab1_JD;
+package lab1_JD.trip;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -42,7 +42,7 @@ public class Trip {
                 "startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", destiny='" + destiny + '\'' +
-                ", price=" + price +
+                ", price=" + getPrice() +
                 '}';
     }
 

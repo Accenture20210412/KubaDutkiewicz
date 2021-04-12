@@ -1,5 +1,7 @@
 package lab1_JD;
 
+import lab1_JD.trip.Trip;
+
 public class Customer {
 
     private String nameAndSurname;

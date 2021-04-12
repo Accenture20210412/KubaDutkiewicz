@@ -12,6 +12,11 @@ public class Customer {
         this.trip = trip;
     }
 
+    public Customer(String nameAndSurname, String address) {
+        this.nameAndSurname = nameAndSurname;
+        this.address = address;
+    }
+
     public Customer() {
     }
 

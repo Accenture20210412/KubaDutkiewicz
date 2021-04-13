@@ -23,15 +23,13 @@ public class DomesticTrip extends Trip {
     @Override
     public String toString() {
         return "DomesticTrip{" +
-                "discount=" + discount +
+                "discount=" + getPrice() +
                 '}';
     }
 
     @Override
     public BigDecimal getPrice() {
-        BigDecimal price = super.getPrice();
-        BigDecimal discount = getDiscount();
-        BigDecimal priceWithDiscount = price.subtract(discount);
+        BigDecimal priceWithDiscount = super.getPrice().subtract(discount);
         return priceWithDiscount;
     }
 }

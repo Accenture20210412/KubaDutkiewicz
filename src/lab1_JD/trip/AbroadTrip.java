@@ -25,15 +25,13 @@ public class AbroadTrip extends Trip {
     @Override
     public String toString() {
         return "AbroadTrip{" +
-                "insurancePrice=" + insurancePrice +
+                "insurancePrice=" + getPrice() +
                 '}';
     }
 
     @Override
     public BigDecimal getPrice() {
-        BigDecimal price = super.getPrice();
-        BigDecimal insurance = getInsurancePrice();
-        BigDecimal priceWithInsurance = price.add(insurance);
+        BigDecimal priceWithInsurance = super.getPrice().add(insurancePrice);
         return priceWithInsurance;
     }
 }

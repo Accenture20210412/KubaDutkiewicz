@@ -2,6 +2,7 @@ package lab1_JD.trip;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class AbroadTrip extends Trip {
 
@@ -27,6 +28,24 @@ public class AbroadTrip extends Trip {
         return "AbroadTrip{" +
                 "insurancePrice=" + getPrice() +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AbroadTrip)) return false;
+        if (!super.equals(o)) return false;
+
+        AbroadTrip that = (AbroadTrip) o;
+
+        return Objects.equals(insurancePrice, that.insurancePrice);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (insurancePrice != null ? insurancePrice.hashCode() : 0);
+        return result;
     }
 
     @Override

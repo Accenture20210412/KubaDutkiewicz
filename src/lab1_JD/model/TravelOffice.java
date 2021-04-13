@@ -24,6 +24,21 @@ public class TravelOffice {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TravelOffice)) return false;
+
+        TravelOffice that = (TravelOffice) o;
+
+        return Arrays.equals(customerTab, that.customerTab);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(customerTab);
+    }
+
     public void addCustomer(Customer customer) {
         if (customerTab[customerTab.length-1] != null) {
             extendArray();

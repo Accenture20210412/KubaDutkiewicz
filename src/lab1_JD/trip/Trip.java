@@ -2,6 +2,7 @@ package lab1_JD.trip;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Trip {
 
@@ -53,10 +54,10 @@ public class Trip {
 
         Trip trip = (Trip) o;
 
-        if (startDate != null ? !startDate.equals(trip.startDate) : trip.startDate != null) return false;
-        if (endDate != null ? !endDate.equals(trip.endDate) : trip.endDate != null) return false;
-        if (destiny != null ? !destiny.equals(trip.destiny) : trip.destiny != null) return false;
-        return price != null ? price.equals(trip.price) : trip.price == null;
+        if (!Objects.equals(startDate, trip.startDate)) return false;
+        if (!Objects.equals(endDate, trip.endDate)) return false;
+        if (!Objects.equals(destiny, trip.destiny)) return false;
+        return Objects.equals(price, trip.price);
     }
 
     @Override

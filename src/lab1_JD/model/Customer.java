@@ -1,4 +1,4 @@
-package lab1_JD;
+package lab1_JD.model;
 
 import lab1_JD.trip.Trip;
 

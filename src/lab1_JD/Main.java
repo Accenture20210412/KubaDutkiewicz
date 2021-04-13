@@ -1,5 +1,7 @@
 package lab1_JD;
 
+import lab1_JD.model.Customer;
+import lab1_JD.model.TravelOffice;
 import lab1_JD.trip.AbroadTrip;
 import lab1_JD.trip.DomesticTrip;
 import lab1_JD.trip.Trip;

@@ -4,26 +4,33 @@ import lab1_JD.trip.Trip;
 
 public class Customer {
 
-    private String nameAndSurname;
+    private String firstName;
+    private String lastName;
     private String address;
     private Trip trip;
 
-    public Customer(String nameAndSurname, String address, Trip trip) {
-        this.nameAndSurname = nameAndSurname;
+    public Customer(String firstName, String lastName, String address, Trip trip) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.address = address;
         this.trip = trip;
     }
 
-    public Customer(String nameAndSurname, String address) {
-        this.nameAndSurname = nameAndSurname;
+    public Customer(String firstName, String lastName, String address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.address = address;
     }
 
     public Customer() {
     }
 
-    public String getNameAndSurname() {
-        return nameAndSurname;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public String getAddress() {
@@ -37,7 +44,8 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "nameAndSurname='" + nameAndSurname + '\'' +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
                 ", trip=" + trip +
                 '}';

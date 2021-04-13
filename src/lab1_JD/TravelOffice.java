@@ -26,17 +26,21 @@ public class TravelOffice {
 
     public void addCustomer(Customer customer) {
         if (customerTab[customerTab.length-1] != null) {
-            Customer[] extendedCustomerTable = customerTab;
-            customerTab = new Customer[customerTab.length * 2];
-            for (int i = 0; i < extendedCustomerTable.length; i++) {
-                customerTab[i] = extendedCustomerTable[i];
-                customerTab[extendedCustomerTable.length] = customer;
+            extendArray();
+        }
+        for (int i=0; i < customerTab.length; i++) {
+            if(customerTab[i] == null) {
+                customerTab[i] = customer;
+                break;
             }
-        } else {
-            for (int i = 0; i < customerTab.length; i++) {
-                if (customerTab[i] == null)
-                    customerTab[i] = customer;
-            }
+        }
+    }
+
+    private void extendArray() {
+        Customer[] tmpCustomerTable = customerTab;
+        customerTab = new Customer[customerTab.length * 2];
+        for (int i = 0; i < tmpCustomerTable.length; i++) {
+            customerTab[i] = tmpCustomerTable[i];
         }
     }
 
